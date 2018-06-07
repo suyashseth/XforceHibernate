@@ -1,17 +1,30 @@
 package com.dev.beans;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="user_info")
 public class UserInfo {
 	
-	@Override
-	public String toString() {
-		return "UserInfo [user_id=" + user_id + ", firstname=" + firstname + ", lastname=" + lastname + ", email="
-				+ email + ", password=" + password + "]";
-	}
+	
+	@Id @Column(name="user_id")
 	private int user_id;
+	
+	@Column(name="firstname")
 	private String firstname;
+	
+	@Column(name="lastname")
 	private String lastname;
+	
+	@Column(name="email")
 	private String email;
+	
+	@Column(name="password")
 	private String password;
+	
 	public int getUser_id() {
 		return user_id;
 	}
